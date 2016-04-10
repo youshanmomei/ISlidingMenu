@@ -3,14 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="cn.qiuc.org.islidingmenu.MainActivity">
+    tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <cn.qiuc.org.islidingmenu.SlidingMenu
+        android:id="@+id/slidingMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--menu, the index in the container is 0-->
+        <include layout="@layout/menu" />
+
+        <!--mian view, the index in the container is 1-->
+        <include layout="@layout/main" />
+
+    </cn.qiuc.org.islidingmenu.SlidingMenu>
 </RelativeLayout>
